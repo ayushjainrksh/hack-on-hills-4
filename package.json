@@ -1,0 +1,19 @@
+{
+  "name": "hack-on-hills-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushjainrksh/hack-on-hills-4.git"
+  },
+  "author": "Ayush Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushjainrksh/hack-on-hills-4/issues"
+  },
+  "homepage": "https://github.com/ayushjainrksh/hack-on-hills-4#readme"
+}
