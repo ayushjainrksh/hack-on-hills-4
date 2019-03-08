@@ -1,6 +1,8 @@
+require('dotenv').config()
+
 var express = require('express'),
     app = express(),
-    PORT = 8000 | process.env.PORT
+    PORT = 4000 | process.env.PORT
 
 app.set('view engine','ejs');
 app.use(express.static('assets'))
@@ -10,7 +12,7 @@ app.get('/', function(req, res){
 })
 
 app.get('/booths/nearme', function(req, res){
-    res.render('nearme')
+    res.render('nearme',{API_KEY : process.env.API_KEY})
 })
 
 app.listen(PORT, function(err){
