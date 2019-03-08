@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayushjainrksh/hack-on-hills-4/issues"
   },
-  "homepage": "https://github.com/ayushjainrksh/hack-on-hills-4#readme"
+  "homepage": "https://github.com/ayushjainrksh/hack-on-hills-4#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
