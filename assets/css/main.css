@@ -1,3 +1,58 @@
 #map {
     height: 100%;
 }
+
+body{
+	margin: 0 auto;
+	box-sizing: border-box;
+
+}
+
+.container{
+
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 5px;
+}
+
+
+
+.website-name{
+
+	text-align: center;
+	font-size: 220%;
+	font-family: 'Playfair Display', serif;
+	margin-top: -10px;
+}
+
+.name-footer{
+
+	text-align: center;
+	font-size: 120%;
+	margin-top: -50px;
+	font-family: 'IBM Plex Serif', serif;
+
+}
+
+.navbar{
+	margin-top: -5px;
+}
+
+li{
+	display: inline;
+	padding-right: 90px;
+	padding-left: 80px;
+	font-size: 140%;
+}
+
+a:link{
+	text-decoration: none;
+	color: black;
+
+
+}
+
+a:hover{
+	color: rgb(229, 99, 63)
+}
