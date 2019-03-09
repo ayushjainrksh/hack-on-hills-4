@@ -47,17 +47,44 @@ function initMap() {
     }
 
     // Marker
-    var request = [
-        {
-        query: 'G.S.S.S., AMROH',
-        fields: ['name', 'geometry'],
-        },{
-        query: 'G.P.S. DARBELI',
-        fields: ['name', 'geometry']
-        }
-    ];
+    var data = document.getElementById("data");
+    // console.log(data)
+    arr = data.innerHTML.split("\n")
+    // console.log(arr)
+    // data.innerHTML.forEach(function(ele){
+    //     console.log(" hEllo "+ele)
+    //   })
+    // var request = arr;
+    // var request = [
+    //     {
+    //         query: String,
+    //         fields: ['name', 'geometry']
+    //     }       
+    // ];
+    var request = []
+
+    arr.forEach(function(loc){
+        request.push({
+            query: loc,
+            fields: ['name', 'geometry']
+        })
+    })
 
 
+    // console.log(request)
+    // var request = [
+    //     {
+    //     query: 'G.S.S.S., AMROH',
+    //     fields: ['name', 'geometry'],
+    //     },{
+    //     query: 'G.P.S. DARBELI',
+    //     fields: ['name', 'geometry']
+    //     }
+    // ];
+
+    //     request.forEach(function(re){
+    //     console.log(re)
+    // })
 
     // var features = [
     //     {
@@ -81,6 +108,17 @@ function initMap() {
             }
         });
     });
+
+    // findPlaceFromPhoneNumber(requestPlace, function(results, status){
+        // service.findPlaceFromPhoneNumber(requestPhone, function(results, status) {
+        //     if (status === google.maps.places.PlacesServiceStatus.OK) {
+        //     for (var i = 0; i < results.length; i++) {
+        //         createMarker(results[i]);
+        //     }
+    
+        //     map.setCenter(results[0].geometry.location);
+        //     }
+        // });
 }
 
 function createMarker(place) {
