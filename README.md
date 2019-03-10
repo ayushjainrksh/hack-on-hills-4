@@ -13,3 +13,13 @@
 5. Make the changes you want and use `git add .` and `git commit -m "message"` to commit the changes and `git push origin master`
 
 6. Now open a pull request from website.
+
+
+### To run the application
+
+1. Dependencies : `Node.js`
+2. After installing node.js run : `npm install`
+3. Create a file in your root directory : `.env`
+4. Place google map api key in this directory : `API_KEY = your_api_key`
+5. To run the project : `node app.js`
+6. Visit : `localhost:4000`
