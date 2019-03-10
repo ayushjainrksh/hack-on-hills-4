@@ -1,5 +1,6 @@
 var map, infoWindow;
 var service;
+var savepos = {};
 // var setZoom = 4.77;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -10,6 +11,7 @@ function initMap() {
     });
 
     // Geolocation
+    var pos = {}
     infoWindow = new google.maps.InfoWindow();
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -18,7 +20,12 @@ function initMap() {
             lng: position.coords.longitude
         };
         
+        savepos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
         // Mark my location
+        console.log(pos);
         var locMarker = new google.maps.Marker({
             position: pos,
             map: map,
@@ -28,6 +35,46 @@ function initMap() {
               infoWindow.setContent(place.name);
               infowindow.open(map, locMarker);
           });
+
+          var ran = [
+            {
+                lat: savepos.lat + 0.004, lng: savepos.lng + 0.004
+            },
+            {
+                lat: savepos.lat + 0.009, lng: savepos.lng + 0.004
+            },
+            {
+                lat: savepos.lat + 0.0034, lng: savepos.lng + 0.003
+            },
+            {
+                lat: savepos.lat - 0.0034, lng: savepos.lng + 0.009
+            },
+            {
+                lat: savepos.lat - 0.0034, lng: savepos.lng - 0.009
+            },
+            {
+                lat: savepos.lat - 0.005, lng: savepos.lng - 0.008
+            }
+        ];
+        ran.forEach(function(mark){
+            console.log(mark);
+            var marker = new google.maps.Marker({
+                position: mark,
+                map: map,
+                // title: 
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent('1,Virender Kashyap,385973,52.3%,Bharatiya Janta Party <br>' +
+                '2,Mohan Lal Brakta,301786,40.9%,Indian National Congress<br>'+
+                '3,Subhash Chander,14233,1.9%,Aam Aadmi Party'+
+                '4,Jagat Ram,11434,1.5%,Communist Party Of India (MARXIST)'+
+                '5,Virender Kumar Kashyap,6173,0.8%,Independent'+
+                '6,Gurnam Singh Koli,5985,0.8%,Bahujan Samaj Party'+
+                '7,Shurveer Singh,4385,0.6%,Samajwadi Party');
+                infowindow.open(map, this);
+              });
+  
+        })
 
           var cityCircle = new google.maps.Circle({
             strokeColor: '#FF0000',
@@ -43,7 +90,9 @@ function initMap() {
           });  
         
         //   MyMap.map.setCenter(new google.maps.LatLng( 31.1042384, 77.1655002 ) );
-          map.setZoom(14);
+        map.setZoom(14);
+        
+        
         // map = new google.maps.Map(document.getElementById('map'), {
         //     center: {lat: 31.1042384, lng: 77.1655002},
         //     zoom: 15
@@ -93,31 +142,43 @@ function initMap() {
         })
     })
 
+    
 
-    var ran = [
-        {
-          lat: 31.1013929, lng: 77.1554104
-        },
-        {
-          lat: 31.1101066, lng: 77.1604326
-        },
-        {
-            lat: 31.105235, lng: 77.1705786
-        },
-        {
-            lat: 31.101983, lng: 77.1658365
-        }
-    ]
+    
+    // var ran = [
+    //     {
+    //       lat: 31.1013929, lng: 77.1554104
+    //     },
+    //     {
+    //       lat: 31.1101066, lng: 77.1604326
+    //     },
+    //     {
+    //         lat: 31.105235, lng: 77.1705786
+    //     },
+    //     {
+    //         lat: 31.101983, lng: 77.1658365
+    //     }
+    // ]
 
-
-    ran.forEach(function(mark){
-        console.log(mark);
-        var marker = new google.maps.Marker({
-            position: mark,
-            map: map,
-            title: 'Hello World!'
-          });
-    })
+    // var ran = [
+    //     {
+    //         lat: pos.lat + 0.0004, lng: 77.1554104
+    //     },
+    //     {
+    //         lat: 31.1013929, lng: 77.1554104
+    //     },
+    //     {
+    //         lat: 31.1013929, lng: 77.1554104
+    //     }
+    // ]
+    // ran.forEach(function(mark){
+    //     console.log(mark);
+    //     var marker = new google.maps.Marker({
+    //         position: mark,
+    //         map: map,
+    //         title: 'Hello World!'
+    //       });
+    // })
 
     
     // console.log(request)

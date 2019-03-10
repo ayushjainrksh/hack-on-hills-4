@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="practice.css">
-  <script type="text/javascript" src="practice.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-</head>
-<body>
-  <hr style="border-width: 1px; border-color: black; width: 80%;">
+<% include partials/header.ejs %>
+
+  <div class="container">
   <div class="am_thebox">
     <div class="am_left">
       <div class="am_photos">
@@ -16,8 +8,8 @@
     
       </div>
       <div class="am_news">
-        <iframe class="am_iframe" src="https://www.ndtv.com/topic/india-election" ></iframe>
-    
+        <!-- <iframe class="am_iframe" src="https://www.ndtv.com/topic/india-election"></iframe> -->
+        <iframe class="am_iframe" src="https://www.hindustantimes.com/lok-sabha-elections/"></iframe>
       </div>
     </div>
   <div class="am_line">
@@ -31,19 +23,23 @@
     <div class="am_infocontent"> 
       <div class="am_infoleft">
         <span class="am_large">1.</span> 
-      <h2 ><a href="https://www.nvsp.in/forms/Forms/form6?lang=en-GB" target="blank">Form 6</a></h2>
+      <a href="http://www.elections.in/who-can-vote-in-india.html" target="blank">Who Can Become A Voter?</a>
         
       </div>
       <div class="am_inforight">
-        <img src="rabbit.jpg" style="height: 100%; width: 100%;">
+        <img src="/images/Become-voter.jpg" style="height: 100%; width: 100%;">
       </div>
     </div>
     <hr>
     <div class="am_infocontent"> 
       <div class="am_infoleft">
+        <span class="am_large">2.</span> 
+      <a href="http://www.elections.in/why-should-we-vote-in-india.html" target="blank">Why Should I Vote?</a>
+        
         
       </div>
       <div class="am_inforight">
+        <img src="/images/Why-vote.jpg" style="height: 100%; width: 100%;">
         
       </div>
       
@@ -51,9 +47,13 @@
     <hr>
     <div class="am_infocontent"> 
            <div class="am_infoleft">
+            <span class="am_large">3.</span> 
+      <a href="https://www.bankbazaar.com/voter-id/voting-rights-in-india.html" target="blank">Voting Rights</a>
+        
         
            </div>
           <div class="am_inforight">
+            <img src="/images/voting-rights.jpg" style="height: 100%; width: 100%;">
         
           </div>
       
@@ -61,9 +61,12 @@
     <hr>
     <div class="am_infocontent"> 
            <div class="am_infoleft">
-        
+            <span class="am_large">4.</span> 
+      <a href="https://www.nvsp.in/forms/Forms/form6?lang=en-GB" target="blank">Application form for first time voters
+      </a>
            </div>
            <div class="am_inforight">
+            <img src="/images/form.jpg" style="height: 100%; width: 100%;">
         
            </div>
       
@@ -71,9 +74,13 @@
     <hr>
     <div class="am_infocontent"> 
            <div class="am_infoleft">
+            <span class="am_large">5.</span> 
+      <a href="https://www.nvsp.in/forms/Forms/form6?lang=en-GB" target="blank">Lok Sabha 2019 Live Updates</a>
+        
         
            </div>
            <div class="am_inforight">
+            <img src="/images/EVM.jpg" style="height: 100%; width: 100%;">
         
            </div>
       
@@ -81,26 +88,22 @@
     <hr>
     <div class="am_infocontent"> 
            <div class="am_infoleft">
+            <span class="am_large">6.</span> 
+      <a href="https://electoralsearch.in" target="blank">Check your name in Voter list</a>
+        
         
            </div>
            <div class="am_inforight">
+            <img src="last.jpg" style="height: 100%; width: 100%;">
         
            </div>
       
     </div>
     <hr>
-    <div class="am_infocontent"> 
-         <div class="am_infoleft">
-        
-         </div>
-         <div class="am_inforight">
-        
-         </div>
+    
       
     </div>
   </div>
-    
+</div>
 
-
-</body>
-</html>
+<% include partials/footer.ejs %>

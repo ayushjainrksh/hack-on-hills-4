@@ -15,38 +15,6 @@ app.use(function(req, res, next){
   next();
 });
 
-// database/hamirpur_polling_booth.tsv
-
-// var file = fs.readFileSync("/database/hamirpur_polling_booth.tsv");
-// fs.readFile("/database/hamirpur_polling_booth.tsv", {encoding: 'utf-8'}, function(err,data){
-//   if (!err) {
-//       console.log('received data: ' + data);
-//       response.writeHead(200, {'Content-Type': 'text/html'});
-//       response.write(data);
-//       response.end();
-//   } else {
-//       console.log(err);
-//   }
-// });
-
-
-// var lineReader = require('readline').createInterface({
-//   input: require('fs').createReadStream('/database/hamirpur_polling_booth.tsv')
-// });
-
-// lineReader.on('line', function (line) {
-//   console.log('Line from file:', line);
-// });
-
-
-// app.get("/hidden", function(req, res){
-//   fs.readFile('/database/hamirpur_polling_booth.tsv', function(err, data) {
-//     res.writeHead(200);
-//     res.write(data);
-//     res.end();
-//   });
-// })
-
 var fs = require('fs'),
     path = require('path'),    
     filePath = path.join(__dirname, '/assets/database/hamirpur_polling_booth.tsv');
