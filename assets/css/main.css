@@ -9,14 +9,13 @@ html, body {
     padding: 0;
 }
 
-body{
+body {
 	margin: 0 auto;
 	box-sizing: border-box;
 
 }
 
-.container{
-
+.container {
   max-width: 1000px;
   margin: auto;
   background: white;
@@ -25,8 +24,7 @@ body{
 
 
 
-.website-name{
-
+.website-name {
 	text-align: center;
 	font-size: 220%;
 	font-family: 'Playfair Display', serif;
@@ -63,3 +61,45 @@ a:link{
 a:hover{
 	color: rgb(229, 99, 63)
 }
+
+
+
+.centre
+{
+	text-align:center;
+}
+#state {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  #state td, #state th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #state tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #state tr:hover {background-color: #ddd;}
+  
+  #state th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+  }
+  table, th, td {
+	border: 1px solid black;
+  }
+
+#polpar{
+	margin: 30px auto;
+}
+
+
+.parties {
+
+}
+

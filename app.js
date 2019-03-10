@@ -90,6 +90,14 @@ app.get('/booths/nearme', function(req, res){
 
 })
 
+app.get('/constituencies', function(req, res){
+  res.render('constituencies')
+})
+
+app.get('/parties', function(req, res){
+  res.render('parties')
+})
+
 app.listen(PORT, function(err){
     if(err)
         console.log(err)
