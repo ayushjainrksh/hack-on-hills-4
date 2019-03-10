@@ -1,13 +1,10 @@
 var map, infoWindow;
 var service;
 var savepos = {};
-// var setZoom = 4.77;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 23.1339722, lng: 77.7507368},
         zoom: 4.77
-        // center: {lat: 31.1042384, lng: 77.1655002},
-        // zoom: 15
     });
 
     // Geolocation
@@ -36,7 +33,7 @@ function initMap() {
               infowindow.open(map, locMarker);
           });
 
-          var ran = [
+            var ran = [
             {
                 lat: savepos.lat + 0.004, lng: savepos.lng + 0.004
             },
@@ -60,8 +57,7 @@ function initMap() {
             console.log(mark);
             var marker = new google.maps.Marker({
                 position: mark,
-                map: map,
-                // title: 
+                map: map
             });
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent('1,Virender Kashyap,385973,52.3%,Bharatiya Janta Party <br>' +
@@ -72,7 +68,7 @@ function initMap() {
                 '6,Gurnam Singh Koli,5985,0.8%,Bahujan Samaj Party'+
                 '7,Shurveer Singh,4385,0.6%,Samajwadi Party');
                 infowindow.open(map, this);
-              });
+            });
   
         })
 
@@ -92,15 +88,6 @@ function initMap() {
         //   MyMap.map.setCenter(new google.maps.LatLng( 31.1042384, 77.1655002 ) );
         map.setZoom(14);
         
-        
-        // map = new google.maps.Map(document.getElementById('map'), {
-        //     center: {lat: 31.1042384, lng: 77.1655002},
-        //     zoom: 15
-        // });
-  
-        // infoWindow.setPosition(pos);
-        // infoWindow.setContent('Location found.');
-        // infoWindow.open(map);
         map.setCenter(pos);
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
@@ -120,19 +107,7 @@ function initMap() {
 
     // Marker
     var data = document.getElementById("data");
-    // console.log(data)
     arr = data.innerHTML.split("\n")
-    // console.log(arr)
-    // data.innerHTML.forEach(function(ele){
-    //     console.log(" hEllo "+ele)
-    //   })
-    // var request = arr;
-    // var request = [
-    //     {
-    //         query: String,
-    //         fields: ['name', 'geometry']
-    //     }       
-    // ];
     var request = []
 
     arr.forEach(function(loc){
