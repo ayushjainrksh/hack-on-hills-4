@@ -69,33 +69,30 @@ function initMap() {
                 '7,Shurveer Singh,4385,0.6%,Samajwadi Party');
                 infowindow.open(map, this);
             });
-  
         })
 
-          var cityCircle = new google.maps.Circle({
-            strokeColor: '#FF0000',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#FF0000',
-            fillOpacity: 0.35,
-            map: map,
-            center: pos,
-            radius: 2000
-    
-            // radius: Math.sqrt(citymap[city].population) * 100
-          });  
+        var cityCircle = new google.maps.Circle({
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35,
+        map: map,
+        center: pos,
+        radius: 2000
+        });  
         
-        //   MyMap.map.setCenter(new google.maps.LatLng( 31.1042384, 77.1655002 ) );
         map.setZoom(14);
         
         map.setCenter(pos);
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
-    } else {
+    } 
+    else 
+    {
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
@@ -116,69 +113,6 @@ function initMap() {
             fields: ['name', 'geometry']
         })
     })
-
-    
-
-    
-    // var ran = [
-    //     {
-    //       lat: 31.1013929, lng: 77.1554104
-    //     },
-    //     {
-    //       lat: 31.1101066, lng: 77.1604326
-    //     },
-    //     {
-    //         lat: 31.105235, lng: 77.1705786
-    //     },
-    //     {
-    //         lat: 31.101983, lng: 77.1658365
-    //     }
-    // ]
-
-    // var ran = [
-    //     {
-    //         lat: pos.lat + 0.0004, lng: 77.1554104
-    //     },
-    //     {
-    //         lat: 31.1013929, lng: 77.1554104
-    //     },
-    //     {
-    //         lat: 31.1013929, lng: 77.1554104
-    //     }
-    // ]
-    // ran.forEach(function(mark){
-    //     console.log(mark);
-    //     var marker = new google.maps.Marker({
-    //         position: mark,
-    //         map: map,
-    //         title: 'Hello World!'
-    //       });
-    // })
-
-    
-    // console.log(request)
-    // var request = [
-    //     {
-    //     query: 'G.S.S.S., AMROH',
-    //     fields: ['name', 'geometry'],
-    //     },{
-    //     query: 'G.P.S. DARBELI',
-    //     fields: ['name', 'geometry']
-    //     }
-    // ];
-
-    //     request.forEach(function(re){
-    //     console.log(re)
-    // })
-
-    // var features = [
-    //     {
-    //       position: new google.maps.LatLng(-33.91721, 151.22630),
-    //       type: 'info'
-    //     }, {
-    //       position: new google.maps.LatLng(-33.91539, 151.22820),
-    //       type: 'info'
-    //     }
 
 
     service = new google.maps.places.PlacesService(map);
